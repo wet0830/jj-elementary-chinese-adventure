@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-Hant-TW">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#a8d8d0"><meta name="description" content="JJ 小二國語冒險旅途：以海上群島探索國語課程、練習閱讀與收集島章。"><title>JJ 小二國語冒險旅途</title><link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#a8d8d0"><meta name="description" content="JJ 小二國語冒險旅途：以海上群島探索國語課程、練習閱讀與收集島章。"><title>JJ 小二國語冒險旅途</title><link rel="stylesheet" href="styles.css?v=jj-20261103-r2">
 </head>
 <body>
 <div id="app">
@@ -26,9 +26,9 @@
 </div>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script>
-fetch('./data/content.json').then(r=>r.json()).then(d=>{document.getElementById('fallbackList').innerHTML=d.islands.map(x=>'<article><h2>'+x.name+'島 · 示意</h2><p><b>內容重點：</b>'+x.focus+'</p><p><b>學習目標：</b>'+x.goal+'</p>'+x.modules.map(m=>'<p><b>'+m[0]+'：</b>'+m[1]+'</p>').join('')).join('')}).catch(()=>{});
+fetch('./data/content.json?v=jj-20261103-r2').then(r=>r.json()).then(d=>{document.getElementById('fallbackList').innerHTML=d.islands.map(x=>'<article><h2>'+x.name+'島 · 示意</h2><p><b>內容重點：</b>'+x.focus+'</p><p><b>學習目標：</b>'+x.goal+'</p>'+x.modules.map(m=>'<p><b>'+m[0]+'：</b>'+m[1]+'</p>').join('')).join('')}).catch(()=>{});
 </script>
-<script type="module" src="js/app.js" onerror="document.getElementById('fallback').classList.add('show')"></script>
+<script type="module" src="js/app.js?v=jj-20261103-r2" onerror="document.getElementById('fallback').classList.add('show')"></script>
 </body></html>
 
 

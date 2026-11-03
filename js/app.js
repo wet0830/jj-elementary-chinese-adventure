@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
 import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-const data=await fetch('./data/content.json').then(r=>{if(!r.ok)throw Error('content');return r.json()});
+const data=await fetch('./data/content.json?v=jj-20261103-r2').then(r=>{if(!r.ok)throw Error('content');return r.json()});
 const $=s=>document.querySelector(s), safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const key='jj-progress-v1',fresh=()=>({visited:[],stamps:[],items:0,xp:0,owned:[],correctAnswers:{},worksheets:{},scores:{}});let state;try{state=Object.assign(fresh(),JSON.parse(localStorage.getItem(key)||'{}'))}catch{state=fresh()}
 let theme=+(localStorage.getItem('jj-theme')||0),day=+(localStorage.getItem('jj-day')||0),active=null,qi=0,done=false,paused=matchMedia('(prefers-reduced-motion: reduce)').matches;
